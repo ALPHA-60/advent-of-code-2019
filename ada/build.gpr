@@ -1,0 +1,14 @@
+project Build is
+   for Source_Dirs use ("src");
+   for Main use ("main.adb");
+   for Object_Dir use "obj";
+   package Pretty_Printer is
+      for Default_Switches ("ada") use ("-c0", "-pL", "-aL", "-kL");
+   end Pretty_Printer;
+  package Compiler is
+      for Default_Switches ("ada") use ("-gnatwa", "-gnatyaAbcdefhiklM128noOprsStux3", "-gnato", "-fstack-check", "-gnat12", "-g", "-O2");
+   end Compiler;
+   package Builder is
+      for Executable ("main.adb") use "main";
+   end Builder;
+end Build;

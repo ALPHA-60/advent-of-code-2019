@@ -1,0 +1,7 @@
+-- Wisi project file
+
+gpr_project_path=.
+
+gpr_file=build.gpr
+
+main=obj/main
